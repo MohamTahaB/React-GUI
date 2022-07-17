@@ -1,7 +1,7 @@
 import React from 'react'
 import './Tab.css'
 
-const EditableRow = () => {
+const EditableRow = ({ editFormData, handleEditFormChange }) => {
     return (
         <tr>
             <td>
@@ -10,6 +10,8 @@ const EditableRow = () => {
                     required='required'
                     placeholder='Enter a name ...'
                     name='fullName'
+                    value={editFormData.fullName}
+                    onChange={handleEditFormChange}
                 ></input>
             </td>
             <td>
@@ -18,6 +20,8 @@ const EditableRow = () => {
                     required='required'
                     placeholder='Enter an address ...'
                     name='address'
+                    value={editFormData.address}
+                    onChange={handleEditFormChange}
                 ></input>
             </td>
             <td>
@@ -26,6 +30,8 @@ const EditableRow = () => {
                     required='required'
                     placeholder='Enter a phone number ...'
                     name='phoneNumber'
+                    value={editFormData.phoneNumber}
+                    onChange={handleEditFormChange}
                 ></input>
             </td>
             <td>
@@ -34,7 +40,12 @@ const EditableRow = () => {
                     required='required'
                     placeholder='Enter an email ...'
                     name='email'
+                    value={editFormData.email}
+                    onChange={handleEditFormChange}
                 ></input>
+            </td>
+            <td>
+                <button type='submit'>Save</button>
             </td>
         </tr>
     )
