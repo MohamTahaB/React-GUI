@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Tab from './components/Tab';
+import SecondTable from './components/secondTable'
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
         <Routes>
           <Route path='/welcome' />
         </Routes>
-      </Router> 
-      <Tab/>
+      </Router>
+      <SecondTable />
     </div>
   );
 }
